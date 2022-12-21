@@ -1,5 +1,6 @@
 import './App.css';
-import {useEffect} from 'react';
+import SearchIcon from './search.svg'
+import {useEffect, useState} from 'react';
 //c9ce3514 api key
 
 const API_URL = 'http://www.omdbapi.com?apikey=c9ce3514'
@@ -11,12 +12,15 @@ const App = ()=>{
     const data = await response.json()
     console.log(data)
   }
+
   useEffect(()=>{
     searchMovies("Batman")
   },[])
 
   return (
-      <h1>Hello World</h1>
+      <div className="app">
+        <h1>Movie Bubble</h1>
+      </div>
   );
 }
 
